@@ -9,10 +9,10 @@ else:
 
     height, width = image.shape[:2]
 
-    half = height // 2
+    half_width = width // 2
 
-    lower_half = image[half:height, :]
+    right_half = image[:, half_width:width]
 
-    cv2.imshow("Dolna połowa obrazu", lower_half)
+    cv2.imshow("Prawa połowa obrazu", right_half)
     cv2.waitKey(0)
     cv2.destroyAllWindows()
